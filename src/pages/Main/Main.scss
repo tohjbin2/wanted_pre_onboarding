@@ -1,0 +1,30 @@
+.slideSection {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.slideBox {
+  width: 1060px;
+  height: 300px;
+  background-color: green;
+  overflow: hidden;
+}
+
+.slideList {
+  display: flex;
+  width: 1060px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 100px;
+}
+.nextBtn {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
