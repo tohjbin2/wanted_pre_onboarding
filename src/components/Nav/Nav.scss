@@ -40,48 +40,71 @@
   height: 16px;
 }
 
+.categoryBox {
+  height: inherit;
+  text-align: center;
+  margin: 0;
+}
+
+.categoryName {
+  display: flex;
+  position: relative;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 15px;
+  display: inline-block;
+}
+
 .iconBox {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.searchIcon {
-  height: 18px;
-}
+  .searchIcon {
+    height: 18px;
+    position: relative;
+    margin-top: 5px;
+  }
 
-.bellIcon {
-  height: 18px;
-}
+  .bellIcon {
+    height: 18px;
+    position: relative;
+    margin-top: 5px;
+  }
 
-.userIcon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  .userIcon {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .serviceBox {
   display: flex;
   align-items: center;
-}
 
-.bar {
-  font-size: 8px;
-}
+  .bar {
+    font-size: 8px;
+  }
 
-.serviceText {
-  font-size: 13px;
-  color: #666;
-  line-height: 30px;
-  height: 30px;
-  border: 1px solid #e1e2e3;
-  border-radius: 15px;
-  padding: 0 10px;
-  margin-left: 15px;
-  font-weight: 400;
-  text-decoration: inherit;
-  cursor: pointer;
+  .serviceText {
+    font-size: 13px;
+    color: #666;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 15px;
+    padding: 0 10px;
+    margin-left: 15px;
+    font-weight: 400;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
 }

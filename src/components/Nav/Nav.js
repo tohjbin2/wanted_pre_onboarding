@@ -36,7 +36,15 @@ function Nav() {
           </span>
           <img className="logo" alt="logo" src="/images/wanted-logo.jpg" />
         </div>
-        <div className="categoryBox" />
+        <div className="categoryBox">
+          <div className="categoryName">채용</div>
+          <div className="categoryName">이벤트</div>
+          <div className="categoryName">직군별 연봉</div>
+          <div className="categoryName">이력서</div>
+          <div className="categoryName">커뮤니티</div>
+          <div className="categoryName">프리랜서</div>
+          <div className="categoryName">AI 합격예측</div>
+        </div>
         <div className="iconBox">
           <div>
             <FiSearch className="searchIcon" />
