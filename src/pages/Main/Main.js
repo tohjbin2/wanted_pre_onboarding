@@ -9,17 +9,9 @@ function Main() {
   const totalSlides = 2;
   const [currentSlide, setCurrentSlide] = useState([0]);
 
-  const activeNextBtn = () => {
+  const onNextBtn = () => {
     Slide.style.transform = `translateX(50%)`;
   };
-
-  // useEffect(() => {
-  //   fetch('/data/slideData.json', {})
-  //     .then(res => res.json)
-  //     .then(data => {
-  //       setSlideData(data);
-  //     });
-  // }, []);
 
   return (
     <div className="Main">
@@ -66,7 +58,7 @@ function Main() {
           </div>
           <div className="button">
             <button className="prevBtn">이전</button>
-            <button className="nextBtn" onClick={activeNextBtn}>
+            <button className="nextBtn" onClick={onNextBtn}>
               다음
             </button>
           </div>
