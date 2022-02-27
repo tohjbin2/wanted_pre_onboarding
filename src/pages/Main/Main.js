@@ -3,29 +3,30 @@ import './Main.scss';
 import Slide from './Slide/Slide';
 
 function Main() {
-  // const [SlideData, setSlideData] = useState([]);
+  const [slideData, setSlideData] = useState([]);
   const [prevBtn, setPrevBtn] = useState([0]);
 
   const totalSlides = 2;
   const [currentSlide, setCurrentSlide] = useState([0]);
 
-  const activeNextBtn = () => {
-    Slide.style.transform = `translateX(50%)`;
+  const onNextBtn = () => {
+    slideData.style.transform = `translateX(50%)`;
   };
 
-  // useEffect(() => {
-  //   fetch('/data/slideData.json', {})
-  //     .then(res => res.json)
-  //     .then(data => {
-  //       setSlideData(data);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('/public/data/slideData.json', {})
+      .then(res => res.json())
+      .then(data => {
+        setSlideData(data);
+      });
+  }, []);
 
   return (
     <div className="Main">
       <div className="slideSection">
         <div className="slideBox">
           <div className="slideList">
+            {slideData.map(list => {})}
             <img
               src="https://static.wanted.co.kr/images/banners/1484/b2853456.jpg"
               alt="성장하는 개발자가 되려면?"
@@ -66,7 +67,7 @@ function Main() {
           </div>
           <div className="button">
             <button className="prevBtn">이전</button>
-            <button className="nextBtn" onClick={activeNextBtn}>
+            <button className="nextBtn" onClick={onNextBtn}>
               다음
             </button>
           </div>
