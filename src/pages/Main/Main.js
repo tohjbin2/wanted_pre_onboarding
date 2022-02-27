@@ -3,21 +3,30 @@ import './Main.scss';
 import Slide from './Slide/Slide';
 
 function Main() {
-  // const [SlideData, setSlideData] = useState([]);
+  const [slideData, setSlideData] = useState([]);
   const [prevBtn, setPrevBtn] = useState([0]);
 
   const totalSlides = 2;
   const [currentSlide, setCurrentSlide] = useState([0]);
 
   const onNextBtn = () => {
-    Slide.style.transform = `translateX(50%)`;
+    slideData.style.transform = `translateX(50%)`;
   };
+
+  useEffect(() => {
+    fetch('/public/data/slideData.json', {})
+      .then(res => res.json())
+      .then(data => {
+        setSlideData(data);
+      });
+  }, []);
 
   return (
     <div className="Main">
       <div className="slideSection">
         <div className="slideBox">
           <div className="slideList">
+            {slideData.map(list => {})}
             <img
               src="https://static.wanted.co.kr/images/banners/1484/b2853456.jpg"
               alt="성장하는 개발자가 되려면?"
