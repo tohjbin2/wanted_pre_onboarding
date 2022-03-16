@@ -9,9 +9,9 @@ function Main() {
   const totalSlides = 2;
   const [currentSlide, setCurrentSlide] = useState([0]);
 
-  const onNextBtn = () => {
-    slideData.style.transform = `translateX(50%)`;
-  };
+  // const onNextBtn = () => {
+  //   slideData.style.transform = `translateX(50%)`;
+  // };
 
   useEffect(() => {
     fetch('/public/data/slideData.json', {})
