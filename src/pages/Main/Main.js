@@ -3,16 +3,6 @@ import './Main.scss';
 import Slide from './Slide/Slide';
 
 function Main() {
-  const [slideData, setSlideData] = useState([]);
-  const [prevBtn, setPrevBtn] = useState([0]);
-
-  const totalSlides = 2;
-  const [currentSlide, setCurrentSlide] = useState([0]);
-
-  // const onNextBtn = () => {
-  //   slideData.style.transform = `translateX(50%)`;
-  // };
-
   useEffect(() => {
     fetch('/public/data/slideData.json', {})
       .then(res => res.json())
